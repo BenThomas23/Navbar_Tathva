@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+
+    /* background: rgb(18, 83, 83); */
+   
+    height: 70px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(to right, #691b22, #000000);
+
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    font-family: 'IM Fell English SC', serif;
+    margin-left: 40px;
+    
+}
+.head1{
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+    display:flex;
+    position: absolute;
+    top: 410px;
+    margin-left: 950px;
+    font-family: 'Zen Antique Soft', serif;
+}
+.head2{
+    color: white;
+    font-size: 20px;
+    flex-direction: column;
+    display:flex;
+    position: absolute;
+    top: 440px;
+    margin-left: 950px;
+    font-family: 'Zen Antique Soft', serif;
+}
+.line {
+    width: 30px;
+    height: 5px;
+    margin: 10px;
+    background: white;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(5%, -50%);
+    z-index: 2;
+}
+
+.nav-links {
+    /* position: fixed; */
+    height: 100vh;
+    /* background: rgb(18, 83, 83); */
+    background-image: linear-gradient(to right, #000000, #691b22);
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(10px at 90% -10%);
+    -webkit-clip-path: circle(10px at 90% -10%);
+    transition: all 0.9s ease-out;
+    pointer-events: none;
+    list-style: none;
+    display: flex;
+    /*width: 50%;
+    height: 100%;*/
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+
+}
+
+.nav-links.open {
+    clip-path: circle(1500px at 95% -10%);
+    -webkit-clip-path: circle(1500px at 90% -10%);
+    pointer-events: all;
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        position: relative;
+    }
+
+    .nav-links {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .head1{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        top: 76px;
+        font-size: 15px;
+        margin-left: 23px;
+    }
+    .head2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        top: 80px;
+        margin-left: 23px;
+        font-size: 15px;
+    }
+}
